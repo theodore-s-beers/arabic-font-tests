@@ -177,6 +177,7 @@
           data-target="#collapseIntro"
           aria-expanded="true"
           aria-controls="collapseIntro"
+          onclick="this.blur();"
         >
           Toggle intro text
         </button>
@@ -188,7 +189,7 @@
           class="form-control"
           id="fontSelector"
           autocomplete="off"
-          onchange="setFont()"
+          onchange="setFont();this.blur();"
         >
           <option value="serif">Default (serif)</option>
           <option value="Amiri">Amiri</option>
@@ -308,6 +309,7 @@
           data-target="#collapseNotes"
           aria-expanded="false"
           aria-controls="collapseNotes"
+          onclick="this.blur();"
         >
           Toggle notes text
         </button>
