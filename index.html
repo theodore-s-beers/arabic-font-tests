@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Test the performance of Arabic-script Google Fonts with a range of snippets of example text."
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amiri|Aref+Ruqaa|Lateef|Markazi+Text|Mirza|Noto+Serif:400,400i|Scheherazade|Tajawal&display=swap&subset=arabic"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --arabic-font: serif;
+      }
+      body {
+        font-family: "Noto Serif", serif;
+      }
+      .arabic {
+        font-family: var(--arabic-font), serif;
+        font-size: x-large;
+        direction: rtl;
+      }
+    </style>
+    <script>
+      function setFont() {
+        var selectedFont = document.getElementById("fontSelector").value;
+        document.documentElement.style.setProperty(
+          "--arabic-font",
+          selectedFont
+        );
+      }
+    </script>
+    <title>Testing Arabic-Script Google Fonts</title>
+  </head>
+  <body>
+    <div class="container" style="margin-top:1rem;max-width:68ch">
+      <h1 style="margin-bottom:1rem">Testing Arabic-Script Google Fonts</h1>
+      <div class="accordion" id="introAccordion">
+        <div
+          id="collapseIntro"
+          class="collapse show"
+          data-parent="#introAccordion"
+        >
+          <p>
+            I’ve been poking around for good general-purpose, Arabic-script web
+            fonts to use for a few projects. One obvious place to look is Google
+            Fonts. So I went to
+            <a href="https://fonts.google.com/" target="_blank" rel="noopener"
+              >their site</a
+            >
+            and selected Arabic. Ok, wow… that narrows things down from 960
+            fonts
+            <a
+              href="https://fonts.google.com/?subset=arabic"
+              target="_blank"
+              rel="noopener"
+              >to 21</a
+            >. It shouldn’t be too difficult to determine which of those might
+            work for my purposes.
+          </p>
+          <p>
+            And what are my purposes/requirements? Again, I’m looking for a
+            general-use font, which would be suitable for entire paragraphs of
+            text. Anything overly stylized or clearly intended for “display” is
+            not going to work. With this criterion, I can eliminate the
+            following 11 options at the outset: Cairo, Changa, Lalezar, El
+            Messiri, Reem Kufi, Lemonada, Almarai, Baloo Bhaijaan (quite a
+            pleasant typeface in its own way), Vibes (wtf?), Rakkas (again, not
+            unattractive), and Jomhuria.
+          </p>
+          <p>
+            So we’re already down to ten. A few more can be cut for particular
+            reasons. Mada doesn’t look quite right to me. The letters join with
+            little gaps (intentionally), which are reminiscent of a rendering
+            problem. Harmattan was designed for West African languages, which is
+            awesome, but not my use case. And Katibeh has certain
+            embellishments&#8202;—&#8202;they’re referred to in
+            <a
+              href="https://fonts.google.com/specimen/Katibeh"
+              target="_blank"
+              rel="noopener"
+              >the description</a
+            >
+            as “small serif-like outstrokes”&#8202;—&#8202;which I prefer to
+            call “hangnails.” Not for me.
+          </p>
+          <p>
+            This leaves us with seven options. Two of them, Tajawal and Aref
+            Ruqaa, could actually be excluded on stylistic grounds. But I wanted
+            to give a chance to a couple of less conventional fonts, and these
+            look nice to me.
+          </p>
+          <p>
+            Our seven finalists are as follows (in alphabetical order):
+            <a
+              href="https://fonts.google.com/specimen/Amiri"
+              target="_blank"
+              rel="noopener"
+              >Amiri</a
+            >,
+            <a
+              href="https://fonts.google.com/specimen/Aref+Ruqaa"
+              target="_blank"
+              rel="noopener"
+              >Aref Ruqaa</a
+            >,
+            <a
+              href="https://fonts.google.com/specimen/Lateef"
+              target="_blank"
+              rel="noopener"
+              >Lateef</a
+            >,
+            <a
+              href="https://fonts.google.com/specimen/Markazi+Text"
+              target="_blank"
+              rel="noopener"
+              >Markazi Text</a
+            >,
+            <a
+              href="https://fonts.google.com/specimen/Mirza"
+              target="_blank"
+              rel="noopener"
+              >Mirza</a
+            >,
+            <a
+              href="https://fonts.google.com/specimen/Scheherazade"
+              target="_blank"
+              rel="noopener"
+              >Scheherazade</a
+            >, and
+            <a
+              href="https://fonts.google.com/specimen/Tajawal"
+              target="_blank"
+              rel="noopener"
+              >Tajawal</a
+            >.
+          </p>
+          <p>
+            Now let’s bring in some more desiderata. I need a font that works in
+            both Arabic and Persian. (This usually is not a problem. Persian has
+            a few extra letters that are close variants of Arabic forms.) Light
+            to moderate use of
+            <a
+              href="https://en.wikipedia.org/wiki/Arabic_diacritics"
+              target="_blank"
+              rel="noopener"
+              >diacritics</a
+            >
+            should not break things. (This often <em>is</em> a problem.) And I’m
+            looking for versatility and readability. The font should be elegant,
+            without causing a distraction, across different kinds of text.
+          </p>
+          <p>
+            For testing, we can load all seven fonts (I know…), fill some boxes
+            with sample text in Arabic and Persian, and set up a selector to
+            compare the appearance of that text from one font to another. I’ll
+            follow up below with some of my notes and conclusions.
+          </p>
+        </div>
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseIntro"
+          aria-expanded="true"
+          aria-controls="collapseIntro"
+        >
+          Toggle intro text
+        </button>
+      </div>
+      <hr />
+      <div class="form-group" style="max-width:18ch">
+        <label for="fontSelector"><strong>Select a font…</strong></label>
+        <select
+          class="form-control"
+          id="fontSelector"
+          autocomplete="off"
+          onchange="setFont()"
+        >
+          <option value="serif">Default (serif)</option>
+          <option value="Amiri">Amiri</option>
+          <option value="Aref Ruqaa">Aref Ruqaa</option>
+          <option value="Lateef">Lateef</option>
+          <option value="Markazi Text">Markazi Text</option>
+          <option value="Mirza">Mirza</option>
+          <option value="Scheherazade">Scheherazade</option>
+          <option value="Tajawal">Tajawal</option>
+        </select>
+      </div>
+      <p>Quintessential Arabic ligatures (see the notes):</p>
+      <div class="card text-right" style="max-width:32ch">
+        <div class="card-body">
+          <p class="card-text arabic" lang="ar">
+            <span>بسم الله الرحمن الرحيم</span><br /><span
+              >الحمد لله رب العالمين</span
+            >
+          </p>
+        </div>
+      </div>
+      <p style="margin-top:1rem">
+        A paragraph of Arabic prose, with light use of diacritics:
+      </p>
+      <div class="card text-right">
+        <div class="card-body">
+          <p class="card-text arabic" lang="ar">
+            قال كليلة: زعموا أنَّ قردًا رأى نجَّارًا يشقُّ خشبة على وتدين راكبًا
+            عليها كالأسوار على الفرس، وكُلَّما شقَّ منها ذراعًا أدخل فيها وتدًا،
+            وأنَّ النجَّار قام لبعض شأنه، فانطلق القرد يتكلَّف من ذلك ما ليس من
+            صناعته، فركب الخشبة ووجهه قِبَل ذلك الوتد، وتدلَّت خُصيتاه في
+            الشقِّ، فلمَّا نزع الوتد انضمَّت الخشبة على خُصيتيه، فخرَّ مغشيًّا
+            عليه، وجاء النجَّار فكان ما لقي منه من الضرب أشدَّ ممَّا مرَّ به
+            أضعافًا كثيرة.
+          </p>
+        </div>
+      </div>
+      <p style="margin-top:1rem">
+        A paragraph of Persian prose:
+      </p>
+      <div class="card text-right">
+        <div class="card-body">
+          <p class="card-text arabic" lang="ar">
+            مالداری را شنیدم که به بخل چنان معروف بود که حاتم طایی در کرم. ظاهر
+            حالش به نعمت دنیا آراسته و خست نفس جبلی در وی همچنان متمکن تا به
+            جایی که نانی به جانی از دست ندادی و گربهٔ بوهریره را به لقمه‌ای
+            ننواختی و سگ اصحاب الکهف را استخوانی نینداختی. فی‌الجمله خانهٔ او را
+            کس ندیدی درگشاده و سفرهٔ او را سرگشاده. شنیدم که به دریای مغرب اندر
+            راه مصر برگرفته بود و خیال فرعونی در سر «حَتَّىٰ إِذَا أَدْرَکَهُ
+            الْغَرَقُ» بادی مخالف کشتی برآمد.
+          </p>
+        </div>
+      </div>
+      <p style="margin-top:1rem">
+        A few lines of Arabic poetry, with moderate use of diacritics:
+      </p>
+      <div class="card text-right" style="max-width:46ch">
+        <div class="card-body">
+          <p class="card-text arabic" lang="ar">
+            <span>لا تَبْكِ ليلى ولا تطْرَبْ إلى هندِ</span><br /><span
+              >واشْرَبْ على الوَرْدِ من حمراءَ كالوَرْدِ</span
+            ><br /><span>كأسًا إذا انحدَرَتْ في حلْقِ شاربِها</span><br /><span
+              >أجْدَتْهُ حُمْرَتَها في العينِ والخدِّ</span
+            ><br /><span>فالخَمرُ ياقوتةٌ والكأسُ لُؤْلُؤةٌ</span><br /><span
+              >من كَفِّ جارِيَةٍ مَمشوقَةِ القَدِّ</span
+            >
+          </p>
+        </div>
+      </div>
+      <p style="margin-top:1rem">A few lines of Persian poetry:</p>
+      <div class="card text-right" style="max-width:46ch">
+        <div class="card-body">
+          <p class="card-text arabic" lang="ar">
+            <span>تا نسوزد عود در مجمر ندارد آدمی</span><br /><span
+              >تا نگرید آب در گوهر ندارد آدمی</span
+            ><br /><span>تا نپیچد سر ز دنیا سر ندارد آدمی</span><br /><span
+              >تا نریزد برگ از خود بر ندارد آدمی</span
+            ><br /><span>تا نگردد استخوانش توتیا از بار درد</span><br /><span
+              >جانِ روشنْ دیدهٔ انور ندارد آدمی</span
+            >
+          </p>
+        </div>
+      </div>
+      <p style="margin-top:1rem">
+        A few verses from the Qur’an, with heavy use of diacritics:
+      </p>
+      <div class="card text-right">
+        <div class="card-body">
+          <p class="card-text arabic" lang="ar">
+            <span
+              >قَالَتْ إِنِّي أَعُوذُ بِالرَّحْمَٰنِ مِنْكَ إِنْ كُنْتَ
+              تَقِيًّا</span
+            ><span>&nbsp;</span><span style="margin-left:.3em">۝</span
+            ><span
+              >قَالَ إِنَّمَا أَنَا رَسُولُ رَبِّكِ لِأَهَبَ لَكِ غُلَامًا
+              زَكِيًّا</span
+            ><span>&nbsp;</span><span style="margin-left:.3em">۝</span
+            ><span
+              >قَالَتْ أَنَّىٰ يَكُونُ لِي غُلَامٌ وَلَمْ يَمْسَسْنِي بَشَرٌ
+              وَلَمْ أَكُ بَغِيًّا</span
+            ><span>&nbsp;</span><span style="margin-left:.3em">۝</span
+            ><span
+              >قَالَ كَذَٰلِكِ قَالَ رَبُّكِ هُوَ عَلَيَّ هَيِّنٌ وَلِنَجْعَلَهُ
+              آيَةً لِّلنَّاسِ وَرَحْمَةً مِّنَّا وَكَانَ أَمْرًا
+              مَّقْضِيًّا</span
+            ><span>&nbsp;</span><span>۝</span>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h2 style="margin-bottom:1rem">Notes and Conclusions</h2>
+      <div class="accordion" id="notesAccordion">
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseNotes"
+          aria-expanded="false"
+          aria-controls="collapseNotes"
+        >
+          Toggle notes text
+        </button>
+        <div id="collapseNotes" class="collapse" data-parent="#notesAccordion">
+          <p style="margin-top:1rem">
+            <strong>Tl;dr:</strong> None of these fonts is bad. (The bad ones
+            were excluded already.) Some did better than others. I would say
+            that Lateef, Markazi Text, Mirza, and Scheherazade basically passed
+            all of the tests. (<strong>Update:</strong> See below for discussion
+            of odd behavior in Markazi Text.) While I have comments on each of
+            those four, they passed. Amiri is stylistically superior, but it has
+            frustrating problems with diacritic placement. Aref Ruqaa can’t
+            overcome the limitations of a handwriting font&#8202;—&#8202;though
+            I don’t fault the designer. It’s nice for what it is. Tajawal is
+            surprisingly delightful, but it shits the bed whenever a Persian
+            letter occurs. (Come on! This would be so easy to fix!) After years
+            in the top spot, Scheherazade is still probably my favorite. But
+            Markazi Text is, on a technical level, the most impressive
+            Arabic-script web font I’ve encountered. Assuming you like the
+            style, you could use it just about anywhere.
+          </p>
+          <p>
+            Now, let’s comment on the candidates one at a time…
+          </p>
+          <p>
+            <strong>Amiri:</strong> This is, of course, a beautiful typeface,
+            and I have a lot of respect for the developers behind the project.
+            It’s an
+            <a
+              href="https://github.com/alif-type/amiri"
+              target="_blank"
+              rel="noopener"
+              >open-source</a
+            >
+            and (if I’m not mistaken) ongoing effort. What I like most about
+            Amiri is the versatility that it has by virtue of its timeless
+            design. As for the version available through Google
+            Fonts&#8202;—&#8202;last updated in July 2017&#8202;—&#8202;there
+            are a few rough edges. The biggest problem is in the placement of
+            diacritics. They seem to be set at the same height relative to the
+            <em>line</em>, regardless of the <em>letter</em> to which they’re
+            attached. In effect, the designers made sure that all diacritics go
+            high or low enough not to collide with any letter forms. This leads
+            to two problems. First, it looks ridiculous when a diacritic is
+            floating in space, far from the associated letter. (See, for
+            example, the final hemistich in our snippet of Persian poetry.)
+            Second, and perhaps more seriously, diacritics can bump into text in
+            the previous or (less often) the subsequent line. One kind of
+            collision has been avoided at the cost of another. There are ways of
+            dealing with this. The letter forms could be made smaller overall,
+            relative to line height, in order to leave more empty vertical
+            space. (With Scheherazade and Lateef, this approach is taken to an
+            extreme.) In more modern Arabic type designs, you’ll usually see
+            that the variation in letter height is reduced; namely, that tall
+            letters like <em>alif</em> and <em>lām</em> don’t extend too much
+            higher than the short letters. This makes life easier. It probably
+            isn’t an option for Amiri, given the historical connection, but who
+            knows&#8202;—&#8202;saving just a touch of height could make a
+            difference. The most important optimization, however, would be to
+            get diacritics closer to the letters. (See Markazi Text for an
+            impressive example of this.)
+          </p>
+          <p>
+            <strong>Aref Ruqaa:</strong> What can I say? I found this typeface
+            æsthetically pleasing when I first saw it, and I still do. It proved
+            somewhat more resilient than I expected. But at the end of the day,
+            this is a kind of
+            <a
+              href="https://en.wikipedia.org/wiki/Ruq%CA%BFah_script"
+              target="_blank"
+              rel="noopener"
+              >handwriting</a
+            >
+            font, and there are going to be places where its logic is outfoxed
+            and it produces strange, unnatural orthography. The worst problems
+            occur where certain letters (<em>sīn</em> and <em>shīn</em> are big
+            offenders) are found in long connected segments. These strings of
+            letters are set to start from above and slope downward, ending at
+            line level. It can be a nice effect, and reminiscent of real
+            handwriting, when just a few letters are involved. But certain
+            combinations lead to bizarre results. (See, for example, the third
+            verse of four in the passage from the Qur’an.) If you’ve ever tried
+            a <em>nasta‘līq</em> typeface, this issue will be familiar to you.
+            Anyway, I’m sure that Aref Ruqaa has its place, and I’d like to see
+            further development in Arabic-script handwriting fonts.
+          </p>
+          <p>
+            <strong>Lateef:</strong> This is an old standby
+            <a
+              href="https://software.sil.org/arabicfonts/"
+              target="_blank"
+              rel="noopener"
+              >from SIL</a
+            >. I always viewed it as the similar but slightly inferior cousin of
+            Scheherazade. (See also my comments on the latter.) The stroke is
+            heavier. My understanding is that it doesn’t have as many glyphs.
+            (What’s with the empty circle in place of the standard marker for
+            the end of a qur’anic verse?) You know, Lateef is fine; I just don’t
+            use it.
+          </p>
+          <p>
+            <strong>Markazi Text:</strong> This is a relatively new
+            font&#8202;—&#8202;a
+            <a
+              href="https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts"
+              target="_blank"
+              rel="noopener"
+              >variable font</a
+            >, in fact!&#8202;—&#8202;from Borna Izadpanah. I could say a lot
+            about it, but I’ll limit myself here to four points. First, Markazi
+            Text is well designed. It does everything you could reasonably ask
+            of it, and then some. Second, make sure you set the HTML
+            <code>lang</code> attribute to <code>"ar"</code> wherever you use
+            this font. Otherwise you might encounter problems with diacritics.
+            (In particular, I saw that adding a <em>shaddah</em> plus a short
+            vowel to a letter&#8202;—&#8202;not an uncommon
+            scenario&#8202;—&#8202;resulted in a
+            <a href="img/markazi-broken.png">break in continuity</a>.) Markazi
+            Text is the only font I tested that has such sensitivity to the
+            <code>lang</code> attribute, and I don’t know why. (<strong
+              >Update:</strong
+            >
+            Even with correct settings, the problem appears in Safari. Now I
+            worry it’s a bug in the font.) Third, the style may not be for
+            everyone. I think it’s gratuitous and unpleasant that the final
+            tooth of <em>sīn</em> or <em>shīn</em> reverses the slant so
+            decisively (and only in the initial or medial position?). But
+            artists have license, no one is forcing me to use this, I should
+            make my own font if I’m so bothered by it, yada yada. Fourth…
+            actually, I can’t remember what my last point was supposed to be.
+            Maybe it’ll come back to me. The bottom line is that Markazi Text is
+            a good general-purpose typeface. Setting aside the finicky behavior
+            around combined diacritics, it holds no bad surprises that I’ve
+            seen.
+          </p>
+          <p>
+            <strong>Mirza:</strong> I like this font well enough. The
+            proportions are correct, and it has some nice ligatures. It’s worth
+            noting that those ligatures appear in Chrome and Firefox, but not in
+            Safari. So the distinctiveness of the typeface will be lessened for
+            users of iOS devices. This is puzzling to me, since Amiri includes
+            some of the same ligatures, and it’s more consistent across all
+            three browsers. Anyway, Mirza has other stylistic idiosyncracies
+            that should be taken into consideration. I’m not a big fan of the
+            stubby comma. Diacritic placement is handled in an interesting way.
+            They’re set close to the letters, and they’re so <em>small</em>!
+            Shrinking the diacritics is one way of preventing collisions. I
+            think they could be a bit difficult to make out. On an esoteric
+            note, the common practice in Arabic script, when a
+            <em>kasrah</em> and a <em>shaddah</em> are added to the same letter,
+            is to move the <em>kasrah</em> above the letter (directly below the
+            <em>shaddah</em>). Mirza instead leaves the <em>kasrah</em> beneath
+            the letter regardless of context. I hesitate to call this wrong, but
+            it’s unusual. I might use this typeface at some point. It didn’t
+            break in any of the tests.
+          </p>
+          <p>
+            <strong>Scheherazade:</strong> This has been my Arabic-script font
+            of choice for years, both on and off the web. It isn’t perfect, but
+            it’s close, and I keep returning to it. One thing to be aware of is
+            that Scheherazade always comes out looking smaller, with more space
+            between lines of text, relative to other typefaces at the same
+            “size.” (This also applies to Lateef.) The generous built-in spacing
+            allows the font to maintain traditional proportions and accommodate
+            diacritics without many problems. Now, I don’t always need this
+            buffer. Sometimes I find myself both increasing the size and
+            decreasing the line height/spacing where I use Scheherazade. But I
+            like that it errs on the side of safety.
+          </p>
+          <p>
+            <strong>Tajawal:</strong> Somehow I find this appealing! The style
+            is quite modern&#8202;—&#8202;far from the
+            <em>naskh</em> derivatives that I usually prefer. I don’t think I
+            could go through with using this for longer blocks of text. It looks
+            cool, though, and it handles diacritics surprisingly well. The
+            biggest problem here is the lack of support for Persian letters.
+            Even the Persian <em>yā’</em> (<code>U+06CC</code>)
+            <a href="img/tajawal-broken.png">breaks</a> this font, which is
+            unnecessary, since it should be identical to the Arabic
+            <em>yā’</em> in the initial or medial position, and identical to the
+            Arabic <em>alif maqṣūrah</em> in the final or isolated position. So
+            the glyphs already exist. To include <em>pe</em>, <em>che</em>, and
+            <em>zhe</em> would mean adding dots; <em>kāf</em> and
+            <em>gāf</em> would require a bit more effort. But the situation
+            doesn’t need to be as bad as it is currently.
+          </p>
+          <p>
+            Now, for a few final notes…
+          </p>
+          <p>
+            <strong>Divine ligatures:</strong> Two of the most
+            <a
+              href="https://en.wikipedia.org/wiki/Arabic_alphabet#Ligatures"
+              target="_blank"
+              rel="noopener"
+              >characteristic ligatures</a
+            >
+            in Arabic are for Allāh and <em>lillāh</em> (the latter meaning
+            “unto God”). Many fonts, in many text
+            processors&#8202;—&#8202;including modern
+            browsers&#8202;—&#8202;will automatically produce the Allāh ligature
+            if the letters <em>alif</em>, <em>lām</em>, <em>lām</em>,
+            <em>hā’</em> appear followed by a space. A smaller number of fonts
+            go a step further, generating a ligature for <em>lillāh</em> as
+            well. (The only difference in spelling between the two words is the
+            initial <em>alif</em> in Allāh. The ligatures also tend to be
+            identical except for the separate first letter, in which case
+            applying the <em>lillāh</em> ligature is as good as applying both.)
+            And some fonts have neither. I try not to get too fussed about this,
+            since there are advantages and disadvantages to each approach, but
+            we may as well test it. As can be seen above, among our seven fonts,
+            Amiri is the only one that makes both ligatures automatically.
+            Markazi Text and Tajawal modify Allāh, but not <em>lillāh</em>.
+            (This is currently my preference.) The others&#8202;—&#8202;Aref
+            Ruqaa, Lateef, Mirza, and Scheherazade&#8202;—&#8202;produce neither
+            ligature. It’s not a hill worth dying on.
+          </p>
+          <p>
+            <strong>Browser differences:</strong> I checked everything in
+            current macOS versions of Chrome, Firefox, and Safari. In Chrome,
+            the default system font performs
+            <a href="img/default-fonts.png">unusually badly</a> when diacritics
+            are introduced. YMMV. Once I switch to any of the real Arabic-script
+            fonts, it’s smooth sailing. Firefox is even better. Not only do the
+            Google Fonts work properly, but Firefox provides a nice default font
+            that looks like Scheherazade with added ligatures. Kudos to whoever
+            set that up! Safari is probably the weakest performer. It doesn’t
+            act up as badly as Chrome with the default font, but I saw problems
+            with diacritic use in both
+            <a href="img/aref-ruqaa-safari.png">Aref Ruqaa</a> and Markazi Text.
+            And there are disabled (?) ligatures in Mirza. Once this page is
+            live, I’ll check it on an iPhone and add my impressions of how
+            things work. What I can say already is that relying on default fonts
+            for Arabic or Persian is risky at best, and that Safari demands
+            especially careful testing.
+          </p>
+          <p>
+            <strong>Open season:</strong> Did I overlook something or make a
+            mistake? If so, please let me know. Also, if you’d like to adapt
+            these tests to your own nefarious ends, feel free. The file
+            (<em>sic</em>) is available
+            <a
+              href="https://github.com/theodore-s-beers/arabic-font-tests"
+              target="_blank"
+              rel="noopener"
+              >on GitHub</a
+            >.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <p>
+        Made with coffee and pedantry by
+        <a href="https://www.theobeers.com/" rel="noopener">Theo Beers</a
+        ><br /><em>Last updated 7 Nov. 2019</em>
+      </p>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
