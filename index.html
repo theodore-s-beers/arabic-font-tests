@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
     />
     <meta
       name="description"
@@ -36,11 +36,8 @@
     </style>
     <script>
       function setFont() {
-        var selectedFont = document.getElementById("fontSelector").value;
-        document.documentElement.style.setProperty(
-          "--arabic-font",
-          selectedFont
-        );
+        var e = document.getElementById("fontSelector").value;
+        document.documentElement.style.setProperty("--arabic-font", e);
       }
     </script>
     <title>Testing Arabic-Script Google Fonts</title>
@@ -177,7 +174,7 @@
           data-target="#collapseIntro"
           aria-expanded="true"
           aria-controls="collapseIntro"
-          onclick="this.blur();"
+          onclick="this.blur()"
         >
           Toggle intro text
         </button>
@@ -189,17 +186,16 @@
           class="form-control"
           id="fontSelector"
           autocomplete="off"
-          onchange="setFont();this.blur();"
+          onchange="setFont(),this.blur()"
+          ><option value="serif">Default (serif)</option
+          ><option value="Amiri">Amiri</option
+          ><option value="Aref Ruqaa">Aref Ruqaa</option
+          ><option value="Lateef">Lateef</option
+          ><option value="Markazi Text">Markazi Text</option
+          ><option value="Mirza">Mirza</option
+          ><option value="Scheherazade">Scheherazade</option
+          ><option value="Tajawal">Tajawal</option></select
         >
-          <option value="serif">Default (serif)</option>
-          <option value="Amiri">Amiri</option>
-          <option value="Aref Ruqaa">Aref Ruqaa</option>
-          <option value="Lateef">Lateef</option>
-          <option value="Markazi Text">Markazi Text</option>
-          <option value="Mirza">Mirza</option>
-          <option value="Scheherazade">Scheherazade</option>
-          <option value="Tajawal">Tajawal</option>
-        </select>
       </div>
       <p>Quintessential Arabic ligatures (see the notes):</p>
       <div class="card text-right" style="max-width:32ch">
@@ -227,9 +223,7 @@
           </p>
         </div>
       </div>
-      <p style="margin-top:1rem">
-        A paragraph of Persian prose:
-      </p>
+      <p style="margin-top:1rem">A paragraph of Persian prose:</p>
       <div class="card text-right">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
@@ -309,7 +303,7 @@
           data-target="#collapseNotes"
           aria-expanded="false"
           aria-controls="collapseNotes"
-          onclick="this.blur();"
+          onclick="this.blur()"
         >
           Toggle notes text
         </button>
@@ -331,9 +325,7 @@
             Arabic-script web font I’ve encountered. Assuming you like the
             style, you could use it just about anywhere.
           </p>
-          <p>
-            Now, let’s comment on the candidates one at a time…
-          </p>
+          <p>Now, let’s comment on the candidates one at a time…</p>
           <p>
             <strong>Amiri:</strong> This is, of course, a beautiful typeface,
             and I have a lot of respect for the developers behind the project.
@@ -496,9 +488,7 @@
             <em>gāf</em> would require a bit more effort. But the situation
             doesn’t need to be as bad as it is currently.
           </p>
-          <p>
-            Now, for a few final notes…
-          </p>
+          <p>Now, for a few final notes…</p>
           <p>
             <strong>Divine ligatures:</strong> Two of the most
             <a
@@ -564,7 +554,7 @@
       <p>
         Made with coffee and pedantry by
         <a href="https://www.theobeers.com/" rel="noopener">Theo Beers</a
-        ><br /><em>Last updated 7 Nov. 2019</em>
+        ><br /><em>Last updated 8 Nov. 2019</em>
       </p>
     </div>
     <script
