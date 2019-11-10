@@ -23,7 +23,7 @@
     />
     <style>
       :root {
-        --arabic-font: serif;
+        --arabic-font: "";
       }
       body {
         font-family: "Noto Serif", serif;
@@ -36,8 +36,19 @@
     </style>
     <script>
       function setFont() {
-        var e = document.getElementById("fontSelector").value;
-        document.documentElement.style.setProperty("--arabic-font", e);
+        var selectedFont = document.getElementById("fontSelector").value;
+        if ("bootstrap" === selectedFont) {
+          document.documentElement.style.setProperty(
+            "--arabic-font",
+            // This is just a copy of the Bootstrap "native font stack"
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+          );
+        } else {
+          document.documentElement.style.setProperty(
+            "--arabic-font",
+            selectedFont
+          );
+        }
       }
     </script>
     <title>Testing Arabic-Script Google Fonts</title>
@@ -146,10 +157,10 @@
             >.
           </p>
           <p>
-            Now, let’s bring in some more desiderata. I need a font that works
-            in both Arabic and Persian. (This usually is not a problem. Persian
-            has a few extra letters that are close variants of Arabic forms.)
-            Light to moderate use of
+            Now let’s bring in some more desiderata. I need a font that works in
+            both Arabic and Persian. (This usually is not a problem. Persian has
+            a few extra letters that are close variants of Arabic forms.) Light
+            to moderate use of
             <a
               href="https://en.wikipedia.org/wiki/Arabic_diacritics"
               target="_blank"
@@ -161,10 +172,20 @@
             without causing a distraction, across different kinds of text.
           </p>
           <p>
-            For testing, we can load all seven fonts (I know…), fill some boxes
+            For testing purposes, we can load all seven fonts, fill some boxes
             with sample text in Arabic and Persian, and set up a selector to
-            compare the appearance of that text from one font to another. I’ll
-            follow up below with some of my notes and conclusions.
+            compare the appearance of that text from one font to another. We
+            ought to have a sense of what the alternatives might be, so the
+            samples will initially be displayed in a browser/system default font
+            (“serif”; this would be the worst case), and there’s an option to
+            try the “<a
+              href="https://getbootstrap.com/docs/4.3/content/reboot/#native-font-stack"
+              target="_blank"
+              rel="noopener"
+              >native stack</a
+            >” used in Bootstrap. (My guess is that other CSS frameworks take
+            similar approaches.) I’ll follow up below with some of my
+            conclusions.
           </p>
           <p>
             Why am I doing this, by the way? Apart from wanting to identify
@@ -189,18 +210,19 @@
         </button>
       </div>
       <hr />
-      <div class="form-group" style="max-width:18ch">
+      <div class="form-group" style="max-width:28ch">
         <label for="fontSelector"><strong>Select a font…</strong></label>
         <select
           class="form-control"
           id="fontSelector"
           autocomplete="off"
           onchange="setFont(),this.blur()"
-          ><option value="serif">Default (serif)</option
+          ><option value="">Default (“serif”)</option
+          ><option value="bootstrap">Bootstrap “native stack”</option
           ><option value="Amiri">Amiri</option
-          ><option value="Aref Ruqaa">Aref Ruqaa</option
+          ><option value="'Aref Ruqaa'">Aref Ruqaa</option
           ><option value="Lateef">Lateef</option
-          ><option value="Markazi Text">Markazi Text</option
+          ><option value="'Markazi Text'">Markazi Text</option
           ><option value="Mirza">Mirza</option
           ><option value="Scheherazade">Scheherazade</option
           ><option value="Tajawal">Tajawal</option></select
@@ -249,7 +271,7 @@
       <p style="margin-top:1rem">
         A few lines of Arabic poetry, with moderate use of diacritics:
       </p>
-      <div class="card text-right" style="max-width:46ch">
+      <div class="card text-right" style="max-width:48ch">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>لا تَبْكِ ليلى ولا تطْرَبْ إلى هندِ</span><br /><span
@@ -263,7 +285,7 @@
         </div>
       </div>
       <p style="margin-top:1rem">A few lines of Persian poetry:</p>
-      <div class="card text-right" style="max-width:46ch">
+      <div class="card text-right" style="max-width:48ch">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>تا نسوزد عود در مجمر ندارد آدمی</span><br /><span
@@ -285,15 +307,15 @@
             <span
               >قَالَتْ إِنِّي أَعُوذُ بِالرَّحْمَٰنِ مِنْكَ إِنْ كُنْتَ
               تَقِيًّا</span
-            ><span>&nbsp;</span><span style="margin-left:.3em">۝</span
+            ><span>&nbsp;</span><span style="margin-left:.35em">۝</span
             ><span
               >قَالَ إِنَّمَا أَنَا رَسُولُ رَبِّكِ لِأَهَبَ لَكِ غُلَامًا
               زَكِيًّا</span
-            ><span>&nbsp;</span><span style="margin-left:.3em">۝</span
+            ><span>&nbsp;</span><span style="margin-left:.35em">۝</span
             ><span
               >قَالَتْ أَنَّىٰ يَكُونُ لِي غُلَامٌ وَلَمْ يَمْسَسْنِي بَشَرٌ
               وَلَمْ أَكُ بَغِيًّا</span
-            ><span>&nbsp;</span><span style="margin-left:.3em">۝</span
+            ><span>&nbsp;</span><span style="margin-left:.35em">۝</span
             ><span
               >قَالَ كَذَٰلِكِ قَالَ رَبُّكِ هُوَ عَلَيَّ هَيِّنٌ وَلِنَجْعَلَهُ
               آيَةً لِّلنَّاسِ وَرَحْمَةً مِّنَّا وَكَانَ أَمْرًا
@@ -334,7 +356,7 @@
             Arabic-script web font I’ve encountered. Assuming you like the
             style, you could use it just about anywhere.
           </p>
-          <p>Now, let’s comment on the candidates one at a time…</p>
+          <p>Now let’s comment on the candidates one at a time…</p>
           <p>
             <strong>Amiri:</strong> This is, of course, a beautiful typeface,
             and I have a lot of respect for the developers behind the project.
@@ -498,7 +520,7 @@
             <em>gāf</em> would require a bit more effort. But the situation
             doesn’t need to be as bad as it is currently.
           </p>
-          <p>Now, for a few final notes…</p>
+          <p>Now for a few final notes…</p>
           <p>
             <strong>Divine ligatures:</strong> Two of the most
             <a
@@ -530,12 +552,13 @@
           <p>
             <strong>Browser differences:</strong> I checked everything in
             current macOS versions of Chrome, Firefox, and Safari. In Chrome,
-            the default system font performs
+            the default “serif” font performs
             <a href="img/default-fonts.png">unusually badly</a> when diacritics
             are introduced. YMMV. Once I switch to any of the dedicated
             Arabic-script fonts, it’s smooth sailing. Firefox is even better.
             Not only do the Google Fonts work properly, but Firefox provides a
-            nice default font that looks like Scheherazade with added ligatures.
+            nice default typeface that looks like a derivative of Scheherazade
+            with added ligatures (and less-than-ideal diacritic placement).
             Kudos to whoever set that up! Safari is probably the weakest
             performer. It doesn’t act up as badly as Chrome with the default
             font, but I saw problems with diacritic use in both
@@ -544,8 +567,21 @@
             live, I’ll check it on an iPhone and add my impressions of how
             things work. (<strong>Update:</strong> The default looks a bit nicer
             in iOS, but the other issues are unchanged.) What I can say already
-            is that relying on built-in fonts for Arabic or Persian is risky at
+            is that relying on a fallback font for Arabic or Persian is risky at
             best, and that Safari demands especially careful testing.
+          </p>
+          <p>
+            <strong>Bootstrap fonts:</strong> Honestly, I’ve found that a
+            well-thought-out “native stack” appears to be a workable option for
+            Arabic-script languages. It may not be beautiful, but it won’t be
+            broken, either. The Bootstrap default setting has not turned out
+            badly in any browser, on any device that I’ve tested. Is this
+            burying the lede? Is there any point in loading a web font? For me,
+            the answer is still yes; I want something that looks at least a bit
+            nicer. But for a project where the goal is to support Arabic and
+            Persian text, without prioritizing it, I don’t think it would make
+            sense to go beyond something like Bootstrap. The practice of relying
+            on the best widely available native fonts has obvious advantages.
           </p>
           <p>
             <strong>Open season:</strong> Did I overlook something or make a
@@ -565,7 +601,7 @@
       <p>
         Made with coffee and pedantry by
         <a href="https://www.theobeers.com/" rel="noopener">Theo Beers</a
-        ><br /><em>Last updated 9 Nov. 2019</em>
+        ><br /><em>Last updated 10 Nov. 2019</em>
       </p>
     </div>
     <script
