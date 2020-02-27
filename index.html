@@ -54,7 +54,7 @@
             <a href="https://fonts.google.com/" target="_blank" rel="noopener"
               >their site</a
             >
-            and selected Arabic. Ok, wow… that narrows things down from 960
+            and selected Arabic. Ok, wow… that narrows things down from 950+
             fonts
             <a
               href="https://fonts.google.com/?subset=arabic"
@@ -87,8 +87,8 @@
               rel="noopener"
               >the description</a
             >
-            as “small serif-like outstrokes”&#8202;—&#8202;which I prefer to
-            call “hangnails.” Not for me.
+            as “small serif-like outstrokes”&#8202;—&#8202;which I would prefer
+            to call “hangnails.” Not for me.
           </p>
           <p>
             This leaves us with seven options. Two of them, Aref Ruqaa and
@@ -163,14 +163,14 @@
             to compare the appearance of that text from one font to another. We
             ought to have a sense of what our alternatives might be, so the
             samples will initially be displayed in a browser/system default font
-            (“serif”; this would be the worst case), and there’s a further
-            option to try the “<a
+            (“serif”; this would be the worst case). There is a further option
+            to try the “<a
               href="https://getbootstrap.com/docs/4.3/content/reboot/#native-font-stack"
               target="_blank"
               rel="noopener"
               >native stack</a
-            >” used in Bootstrap. (My guess is that other CSS frameworks take
-            similar approaches.) I’ll follow up below with my conclusions.
+            >” used in Bootstrap. (My guess is that other popular CSS frameworks
+            take similar approaches.) I’ll follow up below with my conclusions.
           </p>
           <p>
             Why am I doing this, by the way? Apart from wanting to identify
@@ -178,7 +178,7 @@
             general condition of Arabic-script typography on the web (as well as
             on our devices) will require knowledgeable users to give a damn. The
             current <em>status quo</em> is unrecognizably better than what I saw
-            even ten years ago, but there’s still work to be done.
+            ten or fifteen years ago, but there’s still work to be done.
           </p>
         </div>
         <button
@@ -360,24 +360,24 @@
             <em>line</em>, regardless of the <em>letter</em> to which they’re
             attached. In effect, the designers made sure that all diacritics go
             high or low enough not to collide with any letter forms. This leads
-            to two problems. First, it looks ridiculous when a diacritic is
-            floating in space, far from the associated letter. (See, for
-            example, the final hemistich in our snippet of Persian poetry.)
-            Second, and perhaps more seriously, diacritics can bump into text in
-            the previous or (less often) the subsequent line. One kind of
-            collision has been avoided at the cost of another. There are ways of
-            dealing with this. The letter forms could be made smaller overall,
-            relative to line height, in order to leave more empty vertical
-            space. (With Scheherazade and Lateef, this approach is taken to an
-            extreme.) In more modern Arabic type designs, you’ll usually see
-            that the variation in letter height is reduced; namely, tall letters
-            like <em>alif</em> and <em>lām</em> don’t extend too much higher
-            than the short letters. This makes life easier. It probably isn’t an
-            option for Amiri, given the historical connection, but who
+            to two problems. First, it looks silly when a diacritic is floating
+            in space, far from the associated letter. (See, for example, the
+            final hemistich in our snippet of Persian poetry.) Second, and
+            perhaps more seriously, diacritics can bump into text in the
+            previous or (less often) the subsequent line. One kind of collision
+            has been avoided at the cost of another. There are ways of dealing
+            with this. The letter forms could be made smaller overall, relative
+            to line height, in order to leave more empty vertical space. (With
+            Scheherazade and Lateef, this approach is taken to an extreme.) In
+            more modern Arabic type designs, you’ll usually see that the
+            variation in letter height is reduced; namely, tall letters like
+            <em>alif</em> and <em>lām</em> don’t extend too much higher than the
+            short letters. This makes life easier. It probably isn’t an option
+            for Amiri, given the historical connection, but who
             knows&#8202;—&#8202;just a touch of vertical compression might make
             a difference. The most important optimization, however, would be to
-            get diacritics closer to the letters. (See Markazi Text for an
-            impressive example of this.)
+            get diacritics closer to the letters. (See Markazi Text for a good
+            example of this.)
           </p>
           <p>
             <strong>Aref Ruqaa:</strong> What can I say? I found this typeface
@@ -606,6 +606,7 @@
     <script>
       function setFont() {
         const selectedFont = document.getElementById("fontSelector").value;
+
         if ("bootstrap" === selectedFont) {
           document.documentElement.style.setProperty(
             "--arabic-font",
