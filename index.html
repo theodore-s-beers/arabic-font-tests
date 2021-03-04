@@ -8,37 +8,21 @@
     />
     <meta
       name="description"
-      content="Test the performance of Arabic-script Google Fonts with a range of sample text snippets."
+      content="Test the performance of Arabic-script Google Fonts with a range of sample text snippets"
     />
     <link rel="icon" href="#" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css?family=Amiri|Aref+Ruqaa|Lateef|Markazi+Text|Mirza|Noto+Serif:400,400i|Scheherazade|Tajawal&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --arabic-font: "";
-      }
-      body {
-        font-family: "Noto Serif", serif;
-      }
-      .arabic {
-        font-family: var(--arabic-font), serif;
-        font-size: x-large;
-        direction: rtl;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Test Cases for Arabic-Script Google Fonts</title>
   </head>
   <body>
-    <div class="container" style="margin-top:1rem;max-width:68ch">
-      <h1 style="margin-bottom:1rem">
+    <div class="container">
+      <h1 style="margin-bottom: 1rem">
         Test Cases for Arabic-Script Google Fonts
       </h1>
       <div class="accordion" id="introAccordion">
@@ -194,26 +178,27 @@
         </button>
       </div>
       <hr />
-      <div class="form-group" style="max-width:28ch">
+      <div class="form-group" style="max-width: 28ch">
         <label for="fontSelector"><strong>Select a font…</strong></label>
         <select
           class="form-control"
           id="fontSelector"
           autocomplete="off"
           onchange="setFont(),this.blur()"
-          ><option value="">Default (“serif”)</option
-          ><option value="bootstrap">Bootstrap “native stack”</option
-          ><option value="Amiri">Amiri</option
-          ><option value="'Aref Ruqaa'">Aref Ruqaa</option
-          ><option value="Lateef">Lateef</option
-          ><option value="'Markazi Text'">Markazi Text</option
-          ><option value="Mirza">Mirza</option
-          ><option value="Scheherazade">Scheherazade</option
-          ><option value="Tajawal">Tajawal</option></select
         >
+          <option value="">Default (“serif”)</option>
+          <option value="bootstrap">Bootstrap “native stack”</option>
+          <option value="Amiri">Amiri</option>
+          <option value="'Aref Ruqaa'">Aref Ruqaa</option>
+          <option value="Lateef">Lateef</option>
+          <option value="'Markazi Text'">Markazi Text</option>
+          <option value="Mirza">Mirza</option>
+          <option value="Scheherazade">Scheherazade</option>
+          <option value="Tajawal">Tajawal</option>
+        </select>
       </div>
       <p>Quintessential Arabic ligatures (see the notes):</p>
-      <div class="card text-right" style="max-width:32ch">
+      <div class="card text-right" style="max-width: 32ch">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>بسم الله الرحمن الرحيم</span><br /><span
@@ -222,7 +207,7 @@
           </p>
         </div>
       </div>
-      <p style="margin-top:1rem">
+      <p style="margin-top: 1rem">
         A paragraph of Arabic prose, with light use of diacritics:
       </p>
       <div class="card text-right">
@@ -238,7 +223,7 @@
           </p>
         </div>
       </div>
-      <p style="margin-top:1rem">A paragraph of Persian prose:</p>
+      <p style="margin-top: 1rem">A paragraph of Persian prose:</p>
       <div class="card text-right">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
@@ -252,10 +237,10 @@
           </p>
         </div>
       </div>
-      <p style="margin-top:1rem">
+      <p style="margin-top: 1rem">
         A few lines of Arabic poetry, with moderate use of diacritics:
       </p>
-      <div class="card text-right" style="max-width:48ch">
+      <div class="card text-right" style="max-width: 48ch">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>لا تَبْكِ ليلى ولا تطْرَبْ إلى هندِ</span><br /><span
@@ -268,8 +253,8 @@
           </p>
         </div>
       </div>
-      <p style="margin-top:1rem">A few lines of Persian poetry:</p>
-      <div class="card text-right" style="max-width:48ch">
+      <p style="margin-top: 1rem">A few lines of Persian poetry:</p>
+      <div class="card text-right" style="max-width: 48ch">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>تا نسوزد عود در مجمر ندارد آدمی</span><br /><span
@@ -282,7 +267,7 @@
           </p>
         </div>
       </div>
-      <p style="margin-top:1rem">
+      <p style="margin-top: 1rem">
         A few verses from the Qur’an, with heavy use of diacritics:
       </p>
       <div class="card text-right">
@@ -291,15 +276,15 @@
             <span
               >قَالَتْ إِنِّي أَعُوذُ بِالرَّحْمَٰنِ مِنْكَ إِنْ كُنْتَ
               تَقِيًّا</span
-            ><span>&nbsp;</span><span style="margin-left:.35em">۝</span
+            ><span>&nbsp;</span><span class="aya-separator">۝</span
             ><span
               >قَالَ إِنَّمَا أَنَا رَسُولُ رَبِّكِ لِأَهَبَ لَكِ غُلَامًا
               زَكِيًّا</span
-            ><span>&nbsp;</span><span style="margin-left:.35em">۝</span
+            ><span>&nbsp;</span><span class="aya-separator">۝</span
             ><span
               >قَالَتْ أَنَّىٰ يَكُونُ لِي غُلَامٌ وَلَمْ يَمْسَسْنِي بَشَرٌ
               وَلَمْ أَكُ بَغِيًّا</span
-            ><span>&nbsp;</span><span style="margin-left:.35em">۝</span
+            ><span>&nbsp;</span><span class="aya-separator">۝</span
             ><span
               >قَالَ كَذَٰلِكِ قَالَ رَبُّكِ هُوَ عَلَيَّ هَيِّنٌ وَلِنَجْعَلَهُ
               آيَةً لِّلنَّاسِ وَرَحْمَةً مِّنَّا وَكَانَ أَمْرًا
@@ -309,7 +294,7 @@
         </div>
       </div>
       <hr />
-      <h2 style="margin-bottom:1rem">Notes and Conclusions</h2>
+      <h2>Notes and Conclusions</h2>
       <div class="accordion" id="notesAccordion">
         <button
           class="btn btn-outline-primary"
@@ -323,7 +308,7 @@
           Toggle notes text
         </button>
         <div id="collapseNotes" class="collapse" data-parent="#notesAccordion">
-          <p style="margin-top:1rem">
+          <p style="margin-top: 1rem">
             <strong>Tl;dr:</strong> None of these fonts is bad. (The bad ones
             were excluded already.) Some did better than others. I would say
             that Lateef, Markazi Text, Mirza, and Scheherazade basically passed
@@ -588,38 +573,9 @@
         ><br /><em>Last updated 25 Nov. 2019</em>
       </p>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      function setFont() {
-        const selectedFont = document.getElementById("fontSelector").value;
-
-        if ("bootstrap" === selectedFont) {
-          document.documentElement.style.setProperty(
-            "--arabic-font",
-            // This is just a copy of the Bootstrap "native font stack"
-            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
-          );
-        } else {
-          document.documentElement.style.setProperty(
-            "--arabic-font",
-            selectedFont
-          );
-        }
-      }
-    </script>
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/setFont.js"></script>
   </body>
 </html>
