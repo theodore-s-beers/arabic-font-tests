@@ -18,7 +18,7 @@ h2 {
 }
 .container {
   margin-top: 1rem;
-  max-width: 68ch;
+  max-width: 76ch;
 }
 .form-group {
   max-width: 28ch;
@@ -33,5 +33,5 @@ h2 {
   margin-top: 1rem;
 }
 #ligatures-card {
-  max-width: 32ch;
+  max-width: 34ch;
 }
