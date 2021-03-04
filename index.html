@@ -170,7 +170,6 @@
           data-target="#collapseIntro"
           aria-expanded="true"
           aria-controls="collapseIntro"
-          onclick="this.blur()"
         >
           Toggle intro text
         </button>
@@ -178,12 +177,7 @@
       <hr />
       <div class="form-group">
         <label for="fontSelector"><strong>Select a font…</strong></label>
-        <select
-          class="form-control"
-          id="fontSelector"
-          autocomplete="off"
-          onchange="setFont(),this.blur()"
-        >
+        <select class="form-control" id="fontSelector" autocomplete="off">
           <option value="">Default (“serif”)</option>
           <option value="bootstrap">Bootstrap “native stack”</option>
           <option value="Amiri">Amiri</option>
@@ -301,7 +295,6 @@
           data-target="#collapseNotes"
           aria-expanded="false"
           aria-controls="collapseNotes"
-          onclick="this.blur()"
         >
           Toggle notes text
         </button>

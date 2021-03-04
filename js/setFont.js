@@ -11,3 +11,5 @@ function setFont() {
     document.documentElement.style.setProperty("--arabic-font", selectedFont);
   }
 }
+
+document.getElementById("fontSelector").addEventListener("change", setFont);
