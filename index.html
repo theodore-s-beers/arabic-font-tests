@@ -22,9 +22,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 style="margin-bottom: 1rem">
-        Test Cases for Arabic-Script Google Fonts
-      </h1>
+      <h1>Test Cases for Arabic-Script Google Fonts</h1>
       <div class="accordion" id="introAccordion">
         <div
           id="collapseIntro"
@@ -178,7 +176,7 @@
         </button>
       </div>
       <hr />
-      <div class="form-group" style="max-width: 28ch">
+      <div class="form-group">
         <label for="fontSelector"><strong>Select a font…</strong></label>
         <select
           class="form-control"
@@ -198,7 +196,7 @@
         </select>
       </div>
       <p>Quintessential Arabic ligatures (see the notes):</p>
-      <div class="card text-right" style="max-width: 32ch">
+      <div class="card text-right" id="ligatures-card">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>بسم الله الرحمن الرحيم</span><br /><span
@@ -207,7 +205,7 @@
           </p>
         </div>
       </div>
-      <p style="margin-top: 1rem">
+      <p class="label-para">
         A paragraph of Arabic prose, with light use of diacritics:
       </p>
       <div class="card text-right">
@@ -223,7 +221,7 @@
           </p>
         </div>
       </div>
-      <p style="margin-top: 1rem">A paragraph of Persian prose:</p>
+      <p class="label-para">A paragraph of Persian prose:</p>
       <div class="card text-right">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
@@ -237,10 +235,10 @@
           </p>
         </div>
       </div>
-      <p style="margin-top: 1rem">
+      <p class="label-para">
         A few lines of Arabic poetry, with moderate use of diacritics:
       </p>
-      <div class="card text-right" style="max-width: 48ch">
+      <div class="card text-right poetry-card">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>لا تَبْكِ ليلى ولا تطْرَبْ إلى هندِ</span><br /><span
@@ -253,8 +251,8 @@
           </p>
         </div>
       </div>
-      <p style="margin-top: 1rem">A few lines of Persian poetry:</p>
-      <div class="card text-right" style="max-width: 48ch">
+      <p class="label-para">A few lines of Persian poetry:</p>
+      <div class="card text-right poetry-card">
         <div class="card-body">
           <p class="card-text arabic" lang="ar">
             <span>تا نسوزد عود در مجمر ندارد آدمی</span><br /><span
@@ -267,7 +265,7 @@
           </p>
         </div>
       </div>
-      <p style="margin-top: 1rem">
+      <p class="label-para">
         A few verses from the Qur’an, with heavy use of diacritics:
       </p>
       <div class="card text-right">
@@ -308,7 +306,7 @@
           Toggle notes text
         </button>
         <div id="collapseNotes" class="collapse" data-parent="#notesAccordion">
-          <p style="margin-top: 1rem">
+          <p id="first-note">
             <strong>Tl;dr:</strong> None of these fonts is bad. (The bad ones
             were excluded already.) Some did better than others. I would say
             that Lateef, Markazi Text, Mirza, and Scheherazade basically passed
