@@ -27,11 +27,15 @@ h2 {
   margin-top: 1rem;
 }
 .poetry-card {
-  max-width: 48ch;
+  max-width: 44ch;
 }
 #first-note {
   margin-top: 1rem;
 }
+#introAccordion p,
+#notesAccordion p {
+  hyphens: auto;
+}
 #ligatures-card {
-  max-width: 34ch;
+  max-width: 44ch;
 }

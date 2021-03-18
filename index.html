@@ -30,13 +30,21 @@
           data-parent="#introAccordion"
         >
           <p>
+            <em>
+              I first put together a version of this in fall 2019, wasn’t really
+              happy with it, and didn’t share it. I came back to it in early
+              2021 and made some revisions, and I think it might be useful.
+              Without further ado…
+            </em>
+          </p>
+          <p>
             I’ve been poking around for good general-purpose, Arabic-script web
             fonts to use for a few projects. One obvious place to look is Google
             Fonts. So I went to
             <a href="https://fonts.google.com/" target="_blank" rel="noopener"
               >their site</a
             >
-            and selected Arabic. Ok, wow… that narrows things down from 950+
+            and selected Arabic. Ok, wow… that narrows things down from 1,000+
             fonts
             <a
               href="https://fonts.google.com/?subset=arabic"
@@ -51,32 +59,34 @@
             general-use font, which would be suitable for entire paragraphs of
             text. Anything overly stylized or clearly intended for “display” is
             not going to work. With this criterion, I can eliminate the
-            following 11 options at the outset: Cairo, Changa, Lalezar, El
-            Messiri, Reem Kufi, Lemonada, Almarai, Baloo Bhaijaan (quite a
-            pleasant typeface in its own way), Vibes (wtf?), Rakkas (again, not
-            unattractive), and Jomhuria.
+            following 11 options at the outset: Almarai, Cairo, Changa, El
+            Messiri, Jomhuria, Kufam, Lalezar, Lemonada, Rakkas, Reem Kufi, and
+            Vibes (wtf?). Some of these are quite attractive typefaces in their
+            own way—I would highlight El Messiri, Lalezar, and Reem Kufi—but
+            they don’t fit my current use case.
           </p>
           <p>
             So we’re already down to ten. A few more can be cut for particular
             reasons. Mada doesn’t look quite right to me. The letters join with
             little gaps (intentionally), which are reminiscent of a rendering
-            problem. Harmattan was designed for West African languages, which is
-            awesome, but not my use case. And Katibeh has certain
-            embellishments&#8202;—&#8202;they’re referred to in
+            problem. Harmattan was designed for West African languages, and thus
+            fills an important niche. Finally, there’s Katibeh, which has
+            certain embellishments&#8202;—&#8202;referred to in
             <a
               href="https://fonts.google.com/specimen/Katibeh"
               target="_blank"
               rel="noopener"
               >the description</a
             >
-            as “small serif-like outstrokes”&#8202;—&#8202;which I would prefer
-            to call “hangnails.” Not for me.
+            as “small serif-like outstrokes”&#8202;—&#8202;which seem to me to
+            create an unwelcome distraction. As always,
+            <em>de gustibus non est disputandum</em>.
           </p>
           <p>
             This leaves us with seven options. Two of them, Aref Ruqaa and
-            Tajawal, could actually be excluded on stylistic grounds. But I
-            wanted to give a chance to a couple of less conventional fonts, and
-            these look nice to me.
+            Tajawal, could have been excluded on stylistic grounds. But I wanted
+            to give a chance to a couple of less conventional fonts, and these
+            look nice to me.
           </p>
           <p>
             Our seven finalists are as follows (in alphabetical order):
@@ -136,13 +146,13 @@
             >
             should not break anything. (This often <em>is</em> a problem.) And
             I’m looking for versatility and readability. The typeface should be
-            elegant, without causing a distraction, across different kinds of
-            text.
+            elegant, without drawing too much attention, across different kinds
+            of text.
           </p>
           <p>
-            For testing purposes only, we can load the seven fonts, fill some
-            boxes with sample text in Arabic and Persian, and set up a selector
-            to compare the appearance of that text from one font to another. We
+            For testing purposes, we can load the seven fonts, fill some boxes
+            with sample text in Arabic and Persian, and set up a selector to
+            compare the appearance of that text from one font to another. We
             ought to have a sense of what our alternatives might be, so the
             samples will initially be displayed in a browser/system default font
             (“serif”; this would be the worst case). There is a further option
@@ -300,21 +310,21 @@
         </button>
         <div id="collapseNotes" class="collapse" data-parent="#notesAccordion">
           <p id="first-note">
-            <strong>Tl;dr:</strong> None of these fonts is bad. (The bad ones
-            were excluded already.) Some did better than others. I would say
-            that Lateef, Markazi Text, Mirza, and Scheherazade basically passed
-            all of the tests. (<strong>Update:</strong> See below for discussion
-            of odd behavior in Markazi Text.) While I have comments on each of
-            those four, they passed. Amiri is stylistically superior, but it has
-            frustrating problems with diacritic placement. Aref Ruqaa can’t
-            overcome the limitations of a handwriting font&#8202;—&#8202;though
-            I don’t fault the designer. It’s nice for what it is. Tajawal is
-            surprisingly delightful, but it shits the bed whenever a Persian
-            letter occurs. (Come on! This would be so easy to fix!) After years
-            in the top spot, Scheherazade is still probably my favorite. But
-            Markazi Text is, on a technical level, the most impressive
-            Arabic-script web font that I’ve encountered. Assuming you like the
-            style, you could use it just about anywhere.
+            <strong>Tl;dr:</strong> None of these fonts is bad. (The less
+            desirable ones were excluded already.) Some did better than others.
+            I would say that Lateef, Markazi Text, Mirza, and Scheherazade
+            basically passed all of the tests. (<strong>Update:</strong> See
+            below for discussion of odd behavior in Markazi Text.) While I have
+            comments on each of those four, they passed. Amiri is stylistically
+            superior, but it has frustrating problems with diacritic placement.
+            Aref Ruqaa can’t overcome the limitations of a handwriting
+            font&#8202;—&#8202;though I don’t fault the designer. It’s nice for
+            what it is. Tajawal is surprisingly delightful, but it shits the bed
+            whenever a Persian letter occurs. (Come on; this would be so easy to
+            fix!) After years in the top spot, Scheherazade is still probably my
+            favorite. But Markazi Text is, on a technical level, the most
+            impressive Arabic-script web font that I’ve encountered. Assuming
+            you like the style, you could use it just about anywhere.
           </p>
           <p>Now let’s comment on the candidates one at a time…</p>
           <p>
@@ -330,30 +340,30 @@
             and (if I’m not mistaken) ongoing effort. What I like most about
             Amiri is the versatility that it has by virtue of its timeless
             design. As for the version available through Google
-            Fonts&#8202;—&#8202;last updated in July 2017&#8202;—&#8202;there
+            Fonts&#8202;—&#8202;last updated in April 2020&#8202;—&#8202;there
             are a few rough edges. The biggest problem is in the placement of
             diacritics. They seem to be set at the same height relative to the
             <em>line</em>, regardless of the <em>letter</em> to which they’re
-            attached. In effect, the designers made sure that all diacritics go
-            high or low enough not to collide with any letter forms. This leads
-            to two problems. First, it looks silly when a diacritic is floating
-            in space, far from the associated letter. (See, for example, the
-            final hemistich in our snippet of Persian poetry.) Second, and
-            perhaps more seriously, diacritics can bump into text in the
-            previous or (less often) the subsequent line. One kind of collision
-            has been avoided at the cost of another. There are ways of dealing
-            with this. The letter forms could be made smaller overall, relative
-            to line height, in order to leave more empty vertical space. (With
-            Scheherazade and Lateef, this approach is taken to an extreme.) In
-            more modern Arabic type designs, you’ll usually see that the
-            variation in letter height is reduced; namely, tall letters like
-            <em>alif</em> and <em>lām</em> don’t extend too much higher than the
-            short letters. This makes life easier. It probably isn’t an option
-            for Amiri, given the historical connection, but who
-            knows&#8202;—&#8202;just a touch of vertical compression might make
-            a difference. The most important optimization, however, would be to
-            get diacritics closer to the letters. (See Markazi Text for a good
-            example of this.)
+            attached. In effect, the designers have made sure that all
+            diacritics go high or low enough not to collide with any letter
+            forms. This leads to two problems. First, it looks odd when a
+            diacritic is floating in space, far from the associated letter.
+            (See, for example, the final hemistich in our snippet of Persian
+            poetry.) Second, and perhaps more seriously, diacritics can bump
+            into text in the previous or (less often) the subsequent line. One
+            kind of collision has been avoided at the cost of another. There are
+            ways of dealing with this. The letter forms could be made smaller
+            overall, relative to line height, in order to leave more empty
+            vertical space. (With Scheherazade and Lateef, this approach is
+            taken to an extreme.) In more modern Arabic type designs, you’ll
+            usually see that the variation in letter height is reduced; namely,
+            tall letters like <em>alif</em> and <em>lām</em> don’t extend too
+            much higher than the short letters. This makes life easier. It
+            probably isn’t an option for Amiri, given the historical
+            inspiration, but who knows&#8202;—&#8202;just a touch of vertical
+            compression might make a difference. What would seem to be the key
+            optimization, however, would be to get diacritics closer to the
+            letters. (See Markazi Text for a good example of this.)
           </p>
           <p>
             <strong>Aref Ruqaa:</strong> What can I say? I found this typeface
@@ -394,17 +404,16 @@
             use it.
           </p>
           <p>
-            <strong>Markazi Text:</strong> This is a relatively new
-            font&#8202;—&#8202;a
+            <strong>Markazi Text:</strong> This is a newer font&#8202;—&#8202;a
             <a
               href="https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts"
               target="_blank"
               rel="noopener"
               >variable font</a
-            >, in fact!&#8202;—&#8202;from Borna Izadpanah. I could say a lot
+            >, at that!&#8202;—&#8202;from Borna Izadpanah. I could say a lot
             about it, but I’ll limit myself here to four points. First, Markazi
             Text is well designed. It does everything you could reasonably ask
-            of it, and then some. Second, make sure you set the HTML
+            of it, and then some. Second, make sure that you set the HTML
             <code>lang</code> attribute to <code>"ar"</code> wherever you use
             this font. Otherwise you might encounter problems with diacritics.
             (In particular, I saw that adding a <em>shaddah</em> plus a short
@@ -415,18 +424,18 @@
             <code>lang</code> attribute, and I don’t know why. (<strong
               >Update:</strong
             >
-            Even with correct settings, the problem appears in Safari. Now I
-            worry it’s a bug in the font.) Third, the style may not be for
-            everyone. I think it’s gratuitous and unpleasant that the final
-            tooth of <em>sīn</em> or <em>shīn</em> reverses the slant so
-            decisively (and only in the initial or medial position?). But
-            artists have license, no one is forcing me to use this, I should
-            make my own font if I’m so bothered by it, yada yada. Fourth…
-            actually, I can’t remember what my last point was supposed to be.
-            Maybe it’ll come back to me. The bottom line is that Markazi Text is
-            a good general-purpose typeface. Setting aside the finicky behavior
-            around combined diacritics, it holds no bad surprises that I’ve
-            seen.
+            Even with correct settings, I see weird behavior involving
+            diacritics in Safari. Now I worry there’s something amiss with the
+            font.) Third, the style may not be for everyone. I think it’s a bit
+            unpleasant how the final tooth of <em>sīn</em> or
+            <em>shīn</em> reverses the slant so decisively (and only in the
+            initial or medial position?). But artists have license, no one is
+            forcing me to use this, I should make my own font if I’m so bothered
+            by it, yada yada. Fourth… actually, I can’t remember what my last
+            point was supposed to be. Maybe it’ll come back to me. The bottom
+            line is that Markazi Text is a good general-purpose typeface.
+            Setting aside the finicky behavior around combined diacritics, it
+            holds no bad surprises that I’ve seen.
           </p>
           <p>
             <strong>Mirza:</strong> I like this font well enough. The
@@ -435,7 +444,9 @@
             Safari. So the distinctiveness of the typeface will be lessened for
             users of iOS devices. This is puzzling to me, since Amiri includes
             some of the same ligatures, and it’s more consistent across all
-            three browsers. Anyway, Mirza has other stylistic idiosyncracies
+            three browsers. (<strong>Update:</strong> This seems to have been
+            fixed. I don’t know if the problem was with Safari or Mirza, but
+            it’s gone now.) Anyway, Mirza has other stylistic idiosyncracies
             that should be taken into consideration. I’m not a big fan of the
             stubby comma. Diacritic placement is handled in an interesting way.
             They’re set close to the letters, and they’re so <em>small</em>!
@@ -477,8 +488,8 @@
             Arabic <em>alif maqṣūrah</em> in the final or isolated position. So
             the glyphs already exist. To include <em>pe</em>, <em>che</em>, and
             <em>zhe</em> would mean adding dots; <em>kāf</em> and
-            <em>gāf</em> would require a bit more effort. But the situation
-            doesn’t need to be as bad as it is currently.
+            <em>gāf</em> would require a bit more effort. The situation doesn’t
+            need to be as bad as it is currently.
           </p>
           <p>Now for a few final notes…</p>
           <p>
@@ -514,21 +525,23 @@
             current macOS versions of Chrome, Firefox, and Safari. In Chrome,
             the default “serif” font performs
             <a href="img/default-fonts.png">unusually badly</a> when diacritics
-            are introduced. YMMV. Once I switch to any of the dedicated
-            Arabic-script fonts, it’s smooth sailing. Firefox is even better.
-            Not only do the Google Fonts work properly, but Firefox provides a
-            nice default typeface that looks like a derivative of Scheherazade
-            with added ligatures (and less-than-ideal diacritic placement).
-            Kudos to whoever set that up! Safari is probably the weakest
-            performer. It doesn’t act up as badly as Chrome with the default
+            are introduced. YMMV. (<strong>Update:</strong> This seems to have
+            been fixed. It’s nice to revisit these points, just a year later,
+            and see little improvements!) Once I switch to any of the dedicated
+            Arabic-script fonts in Chrome, it’s smooth sailing. Firefox is even
+            better. Not only do the Google Fonts work properly, but Firefox
+            provides a nice default typeface that looks almost like a derivative
+            of Scheherazade with added ligatures (and less-than-ideal diacritic
+            placement). Kudos to whoever set that up! Safari is perhaps the
+            weakest performer. It doesn’t act up too badly with the default
             font, but I saw problems with diacritic use in both
             <a href="img/aref-ruqaa-safari.png">Aref Ruqaa</a> and Markazi Text.
-            And there are disabled (?) ligatures in Mirza. Once this page is
-            live, I’ll check it on an iPhone and add my impressions of how
-            things work. (<strong>Update:</strong> The default looks a bit nicer
-            in iOS, but the other issues are unchanged.) What I can say already
-            is that relying on a fallback font for Arabic or Persian is risky at
-            best, and that Safari demands especially careful testing.
+            And there are disabled (?) ligatures in Mirza. (<strong
+              >Update:</strong
+            >
+            All of these issues seem to have been fixed, at least to some
+            extent.) What I can say, in any case, is that relying on a fallback
+            font for Arabic or Persian is risky.
           </p>
           <p>
             <strong>Bootstrap fonts:</strong> Honestly, I’ve found that a
@@ -537,11 +550,11 @@
             broken, either. The Bootstrap default setting has not turned out
             badly in any browser, on any device that I’ve tested. Is this
             burying the lede? Is there any point in loading a web font? For me,
-            the answer is still yes; I want something that looks at least a bit
-            nicer. But for a project where the goal is to support Arabic and
-            Persian text, without prioritizing it, I don’t think it would make
-            sense to go beyond something like Bootstrap. The practice of relying
-            on the best widely available native fonts has obvious advantages.
+            the answer is still yes; I want something a bit nicer. But for a
+            project where the goal is to support Arabic and Persian text,
+            without prioritizing it, I don’t think this would be called for. As
+            we all know, the practice of relying on widely available native
+            fonts has clear advantages.
           </p>
           <p>
             <strong>Open season:</strong> Did I overlook something or make a
@@ -561,7 +574,7 @@
       <p>
         Made with coffee and pedantry by
         <a href="https://www.theobeers.com/" rel="noopener">Theo Beers</a
-        ><br /><em>Last updated 25 Nov. 2019</em>
+        ><br /><em>Last updated 18 Mar. 2021</em>
       </p>
     </div>
     <script src="./js/jquery-3.3.1.slim.min.js"></script>
