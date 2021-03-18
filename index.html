@@ -435,7 +435,7 @@
           <p>
             <strong>Markazi Text:</strong> This is a newer font&#8202;—&#8202;a
             <a
-              href="https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts"
+              href="https://web.dev/variable-fonts/"
               target="_blank"
               rel="noopener"
               >variable font</a
@@ -448,7 +448,7 @@
             (In particular, I saw that adding a <em>shaddah</em> plus a short
             vowel to a letter&#8202;—&#8202;not an uncommon
             scenario&#8202;—&#8202;resulted in a
-            <a href="img/markazi-broken.png">break in continuity</a>.) Markazi
+            <a href="./img/markazi-broken.png">break in continuity</a>.) Markazi
             Text is the only font I tested that has such sensitivity to the
             <code>lang</code> attribute, and I don’t know why. (<strong
               >Update:</strong
@@ -511,7 +511,7 @@
             cool, though, and it handles diacritics surprisingly well. The
             biggest problem here is the lack of support for Persian letters.
             Even the Persian <em>yā’</em> (<code>U+06CC</code>)
-            <a href="img/tajawal-broken.png">breaks</a> this font, which is
+            <a href="./img/tajawal-broken.png">breaks</a> this font, which is
             unnecessary, since it should be identical to the Arabic
             <em>yā’</em> in the initial or medial position, and identical to the
             Arabic <em>alif maqṣūrah</em> in the final or isolated position. So
@@ -553,19 +553,19 @@
             <strong>Browser differences:</strong> I checked everything in
             current macOS versions of Chrome, Firefox, and Safari. In Chrome,
             the default “serif” font performs
-            <a href="img/default-fonts.png">unusually badly</a> when diacritics
-            are introduced. YMMV. (<strong>Update:</strong> This seems to have
-            been fixed. It’s nice to revisit these points, just a year later,
-            and see little improvements!) Once I switch to any of the dedicated
-            Arabic-script fonts in Chrome, it’s smooth sailing. Firefox is even
-            better. Not only do the Google Fonts work properly, but Firefox
-            provides a nice default typeface that looks almost like a derivative
-            of Scheherazade with added ligatures (and less-than-ideal diacritic
-            placement). Kudos to whoever set that up! Safari is perhaps the
-            weakest performer. It doesn’t act up too badly with the default
-            font, but I saw problems with diacritic use in both
-            <a href="img/aref-ruqaa-safari.png">Aref Ruqaa</a> and Markazi Text.
-            And there are disabled (?) ligatures in Mirza. (<strong
+            <a href="./img/default-fonts.png">unusually badly</a> when
+            diacritics are introduced. YMMV. (<strong>Update:</strong> This
+            seems to have been fixed. It’s nice to revisit these points, just a
+            year later, and see little improvements!) Once I switch to any of
+            the dedicated Arabic-script fonts in Chrome, it’s smooth sailing.
+            Firefox is even better. Not only do the Google Fonts work properly,
+            but Firefox provides a nice default typeface that looks almost like
+            a derivative of Scheherazade with added ligatures (and
+            less-than-ideal diacritic placement). Kudos to whoever set that up!
+            Safari is perhaps the weakest performer. It doesn’t act up too badly
+            with the default font, but I saw problems with diacritic use in both
+            <a href="./img/aref-ruqaa-safari.png">Aref Ruqaa</a> and Markazi
+            Text. And there are disabled (?) ligatures in Mirza. (<strong
               >Update:</strong
             >
             All of these issues seem to have been fixed, at least to some
