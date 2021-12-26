@@ -1,5 +1,5 @@
 function setFont() {
-  const selectedFont = document.getElementById("fontSelector").value;
+  const selectedFont = document.getElementById("font-selector").value;
 
   if ("bootstrap" === selectedFont) {
     document.documentElement.style.setProperty(
@@ -12,4 +12,4 @@ function setFont() {
   }
 }
 
-document.getElementById("fontSelector").addEventListener("change", setFont);
+document.getElementById("font-selector").addEventListener("change", setFont);

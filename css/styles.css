@@ -32,8 +32,8 @@ h2 {
 #first-note {
   margin-top: 1rem;
 }
-#introAccordion p,
-#notesAccordion p {
+#intro-accordion p,
+#notes-accordion p {
   hyphens: auto;
 }
 #ligatures-card {

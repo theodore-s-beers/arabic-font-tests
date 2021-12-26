@@ -37,11 +37,11 @@
   <body>
     <div class="container">
       <h1>Test Cases for Arabic-Script Google Fonts</h1>
-      <div class="accordion" id="introAccordion">
+      <div class="accordion" id="intro-accordion">
         <div
-          id="collapseIntro"
+          id="collapse-intro"
           class="collapse show"
-          data-parent="#introAccordion"
+          data-parent="#intro-accordion"
         >
           <p>
             <em>
@@ -191,17 +191,17 @@
           class="btn btn-outline-primary"
           type="button"
           data-toggle="collapse"
-          data-target="#collapseIntro"
+          data-target="#collapse-intro"
           aria-expanded="true"
-          aria-controls="collapseIntro"
+          aria-controls="collapse-intro"
         >
           Toggle intro text
         </button>
       </div>
       <hr />
       <div class="form-group">
-        <label for="fontSelector"><strong>Select a font…</strong></label>
-        <select class="form-control" id="fontSelector" autocomplete="off">
+        <label for="font-selector"><strong>Select a font…</strong></label>
+        <select class="form-control" id="font-selector" autocomplete="off">
           <option value="">Default (“serif”)</option>
           <option value="bootstrap">Bootstrap “native stack”</option>
           <option value="Amiri">Amiri</option>
@@ -340,18 +340,22 @@
       </div>
       <hr />
       <h2>Notes and Conclusions</h2>
-      <div class="accordion" id="notesAccordion">
+      <div class="accordion" id="notes-accordion">
         <button
           class="btn btn-outline-primary"
           type="button"
           data-toggle="collapse"
-          data-target="#collapseNotes"
+          data-target="#collapse-notes"
           aria-expanded="false"
-          aria-controls="collapseNotes"
+          aria-controls="collapse-notes"
         >
           Toggle notes text
         </button>
-        <div id="collapseNotes" class="collapse" data-parent="#notesAccordion">
+        <div
+          id="collapse-notes"
+          class="collapse"
+          data-parent="#notes-accordion"
+        >
           <p id="first-note">
             <strong>Tl;dr:</strong> None of these fonts is bad. (The less
             desirable ones were excluded already.) Some did better than others.
