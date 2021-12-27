@@ -4,9 +4,11 @@
 body {
   font-family: "Noto Serif", serif;
 }
-h1,
-h2 {
+h1 {
   margin-bottom: 1rem;
+}
+.accordion-button {
+  font-size: 75%;
 }
 .arabic {
   direction: rtl;
@@ -18,9 +20,10 @@ h2 {
 }
 .container {
   margin-top: 1rem;
-  max-width: 76ch;
+  max-width: 78ch;
 }
-.form-group {
+.form-select {
+  margin-top: 0.5rem;
   max-width: 28ch;
 }
 .label-para {
@@ -28,9 +31,6 @@ h2 {
 }
 .poetry-card {
   max-width: 44ch;
-}
-#first-note {
-  margin-top: 1rem;
 }
 #intro-accordion p,
 #notes-accordion p {
