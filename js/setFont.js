@@ -5,7 +5,7 @@ function setFont() {
     document.documentElement.style.setProperty(
       "--arabic-font",
       // This is just a copy of the Bootstrap "native font stack"
-      "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+      "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
     );
   } else {
     document.documentElement.style.setProperty("--arabic-font", selectedFont);
