@@ -1,41 +1,52 @@
 :root {
   --arabic-font: "";
 }
+
 body {
   font-family: "Noto Serif", serif;
 }
+
 h1 {
   margin-bottom: 1rem;
 }
+
 .accordion-button {
   font-size: 75%;
 }
+
 .arabic {
   direction: rtl;
   font-family: var(--arabic-font), serif;
   font-size: x-large;
 }
+
 .aya-separator {
   margin-left: 0.35em;
 }
+
 .container {
   margin-top: 1rem;
   max-width: 78ch;
 }
+
 .form-select {
   margin-top: 0.5rem;
   max-width: 28ch;
 }
+
 .label-para {
   margin-top: 1rem;
 }
+
 .poetry-card {
   max-width: 44ch;
 }
+
 #intro-accordion p,
 #notes-accordion p {
   hyphens: auto;
 }
+
 #ligatures-card {
   max-width: 44ch;
 }
