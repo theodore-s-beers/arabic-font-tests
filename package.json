@@ -6,24 +6,24 @@
   "bugs": {
     "url": "https://github.com/theodore-s-beers/arabic-font-tests/issues"
   },
+  "license": "MIT",
+  "author": "Theo Beers",
   "repository": {
     "type": "git",
     "url": "https://github.com/theodore-s-beers/arabic-font-tests.git"
   },
-  "license": "MIT",
-  "author": "Theo Beers",
   "type": "module",
   "main": "index.html",
   "scripts": {
-    "format": "prettier --write .",
-    "lint": "eslint --fix . && stylelint --fix css/styles.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "oxfmt",
+    "lint": "oxfmt --check && oxlint && stylelint css/styles.css",
+    "test": "echo 'Error: no test specified' && exit 1"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.2.1",
-    "prettier": "^3.8.3",
-    "stylelint": "^17.8.0",
-    "stylelint-config-standard": "^40.0.0"
+    "oxfmt": "^0.54.0",
+    "oxlint": "^1.69.0",
+    "stylelint": "^17.13.0",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^6.0.3"
   }
 }
